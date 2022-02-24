@@ -14,12 +14,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UebersichtComponent,
-    NavComponent
+    NavComponent,
+    HinzufuegenComponent
   ],
   imports: [
     BrowserModule,
