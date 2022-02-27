@@ -14,3 +14,4 @@ export class UebersichtComponent implements OnInit {
     console.log("Übersicht ist da");
   }
 }
+console.log("hurra, die Übersichtsseite lädt endlich");

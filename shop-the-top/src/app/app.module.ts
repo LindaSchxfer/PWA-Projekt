@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +21,7 @@ import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
     AppComponent,
     UebersichtComponent,
     NavComponent,
-    HinzufuegenComponent
+    HinzufuegenComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,8 @@ import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

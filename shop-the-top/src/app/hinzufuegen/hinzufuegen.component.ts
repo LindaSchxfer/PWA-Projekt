@@ -37,3 +37,4 @@ export class HinzufuegenComponent implements OnInit {
   }
 
 }
+console.log("hurra, die Hinzufügenseite lädt endlich");
