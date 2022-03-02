@@ -1,7 +1,7 @@
 export interface ShoppingItem {
     id: string;
     productname: string;
-    quantity: number;
+    quantity: string;
     unit: string;
     place: string;
     done: boolean;

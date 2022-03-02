@@ -1,11 +1,14 @@
-<!--<p>TEst</p>
-
 <form (ngSubmit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
+    <label for="name">Name: </label>
     <input type="text" id="name" class="form-control" name="name" #productnameInput required />
-    <input type="number" step="0.01" #quantityInput required>
-    <input type="select" #unitInput>
-    <input type="select" #placeInput required> 
+    <label for="menge">Menge: </label>
+    <input type="number" id="menge" step="0.01" #quantityInput required/>
+    <label for="einheit">Einheit: </label>
+    <input type="select" id="einheit" #unitInput/>
+    <label for="ort">Einkaufsort: </label>
+    <input type="select" id="ort" #placeInput required/>
     <button mat-raised-button type="submit">Hinzufügen</button>
 </form>
--->
-<button mat-raised-button>Hinzufügen</button>
+
+
+<button (click)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">Hinzufügen</button>

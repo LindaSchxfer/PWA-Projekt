@@ -14,25 +14,25 @@ export class HinzufuegenComponent implements OnInit {
   constructor(private shoppingItemService: ShoppingItemService) { }
 
   ngOnInit(): void {
-    this.loadTodos();
+    this.loadItems();
   }
 
-  async add(productname: string, quantity: number, place: string, unit: string) {
+  async add(productname: string, quantity: string, place: string, unit: string) {
     await this.shoppingItemService.add(productname, quantity, place, unit);
-    await this.loadTodos();
+    await this.loadItems();
   }
 
   /*async sync() {
     await this.shoppingItemService.sync();
-    await this.loadTodos();
+    await this.loadItems();
   }
 
   async toggleDone(todo: Todo) {
     await this.shoppingItemService.toggleDone(todo);
-    await this.loadTodos();
+    await this.loadItems();
   }*/
 
-  async loadTodos() {
+  async loadItems() {
     this.shoppingItems = await this.shoppingItemService.getAll();
   }
 

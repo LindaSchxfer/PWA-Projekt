@@ -17,7 +17,7 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     super('ShoppingItemDB');
     
     this.version(1).stores({
-      shoppingItems: 'id'
+      shoppingItems: '++id'
     });
   }
 
@@ -25,7 +25,8 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.toArray();
   }
   
-  add(productname: string, quantity: number, place: string, unit: string) {
+  add(productname: string, quantity: string, place: string, unit: string) {
+    console.log("Item added");
     return this.shoppingItems.add({productname, quantity, place, unit, id: v4(), done: false});
   }
 
@@ -34,3 +35,4 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
   }
   
 }
+
