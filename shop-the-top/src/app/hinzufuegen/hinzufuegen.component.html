@@ -4,13 +4,19 @@
     <label for="menge">Menge: </label>
     <input type="number" id="menge" step="0.01" #quantityInput required/>
     <label for="einheit">Einheit: </label>
-    <input type="select" id="einheit" #unitInput/>
+    <select id="einheit" #unitInput>
+        <option selected value="Stück">Stück</option>
+        <option value="Liter">Liter</option>
+        <option value="Milliliter">Milliliter</option>
+        <option value="Kilogramm">Kilogramm</option>
+        <option value="Gramm">Gramm</option>
+    </select>
     <label for="ort">Einkaufsort: </label>
-    <input type="select" id="ort" #placeInput required/>
-        <option selected value="Stück"></option>
-        <option selected value="l"></option>
-        <option selected value="ml"></option>
-        <option selected value="kg"></option>
-        <option selected value="g"></option>
+    <select id="ort" #placeInput required>
+        <option selected value="Supermarkt">Supermarkt</option>
+        <option value="Drogerie">Drogerie</option>
+        <option value="Baumarkt">Baumarkt</option>
+        <option value="Fachhandel">Fachhandel</option>
+    </select>
     <button mat-raised-button type="submit">Hinzufügen</button>
 </form>
