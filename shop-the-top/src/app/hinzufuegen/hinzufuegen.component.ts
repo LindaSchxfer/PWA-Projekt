@@ -27,8 +27,8 @@ export class HinzufuegenComponent implements OnInit {
     await this.loadItems();
   }
 
-  async toggleDone(todo: Todo) {
-    await this.shoppingItemService.toggleDone(todo);
+  async toggleDone(item: ShoppingItem) {
+    await this.shoppingItemService.toggleDone(item);
     await this.loadItems();
   }*/
 
