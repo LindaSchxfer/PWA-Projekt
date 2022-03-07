@@ -30,7 +30,7 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.add({productname, quantity, place, unit, id: v4(), done: false});
   }
 
-  getByProductname(/*productname: string*/) {
+  getByPlace(place: string) {
     console.log("Toll");
   }
   
