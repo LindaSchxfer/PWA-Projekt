@@ -17,8 +17,8 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     super('ShoppingItemDB');
     
     this.version(1).stores({
-      shoppingItems: '++id'
-    });
+      shoppingItems: 'id'
+    })
   }
 
   getAll() {

@@ -1,4 +1,4 @@
-<form (ngSubmit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
+<form (submit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
     <label for="name">Name: </label>
     <input type="text" id="name" class="form-control" name="name" #productnameInput required />
     <label for="menge">Menge: </label>
@@ -7,8 +7,10 @@
     <input type="select" id="einheit" #unitInput/>
     <label for="ort">Einkaufsort: </label>
     <input type="select" id="ort" #placeInput required/>
+        <option selected value="Stück"></option>
+        <option selected value="l"></option>
+        <option selected value="ml"></option>
+        <option selected value="kg"></option>
+        <option selected value="g"></option>
     <button mat-raised-button type="submit">Hinzufügen</button>
 </form>
-
-
-<button (click)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">Hinzufügen</button>
