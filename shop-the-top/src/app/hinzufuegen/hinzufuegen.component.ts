@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HinweisComponent } from '../hinweis/hinweis.component';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 
@@ -19,6 +20,7 @@ export class HinzufuegenComponent implements OnInit {
 
   async add(productname: string, quantity: string, place: string, unit: string) {
     await this.shoppingItemService.add(productname, quantity, place, unit);
+    await this.showMeInfo();
     await this.loadItems();
   }
 
@@ -31,10 +33,26 @@ export class HinzufuegenComponent implements OnInit {
     await this.shoppingItemService.toggleDone(item);
     await this.loadItems();
   }*/
-
+ 
   async loadItems() {
     this.shoppingItems = await this.shoppingItemService.getAll();
   }
+  
+  async showMeInfo() {
+  const hinweis = document.getElementById("hinweis");
+  if (hinweis!=null){
+    hinweis.className = "info";
+    window.setTimeout(this.dontShowMeInfo, 2000);
+  }
+  
+ }
+
+  dontShowMeInfo() {
+  let hinweis = document.getElementById("hinweis");
+  if (hinweis!=null){
+    hinweis.className = "noInfo";
+  }
+ }
 
 }
 console.log("hurra, die Hinzufügenseite lädt endlich");
