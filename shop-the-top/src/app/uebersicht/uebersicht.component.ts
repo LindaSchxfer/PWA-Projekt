@@ -31,9 +31,29 @@ export class UebersichtComponent implements OnInit {
     await this.shoppingItemService.toggleDone(item);
     await this.loadItems();
   }*/
-
+  
+    async aendern () {
+     // const x = document.forms[form];
+     // let text = "";
+      //for (let i = 0; i < x.length ;i++) {
+      //text += x.elements[i].value + "<br>";
+//}     
+      await this.loadItems();
+    }
+    
+  
   async loadItems() {
     this.shoppingItems = await this.shoppingItemService.getAll();
   }
+
+  async loeschen(){
+    console.log("Alles eingekauft");
+    await this.shoppingItemService.clear();
+    await this.loadItems();
+     
+  }
+  
+  
 }
-console.log("hurra, die Übersichtsseite lädt endlich");
+
+

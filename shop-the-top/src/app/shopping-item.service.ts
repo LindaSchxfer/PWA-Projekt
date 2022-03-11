@@ -10,6 +10,7 @@ import { ShoppingItem } from './shopping-item';
 })
 
 export class ShoppingItemService extends Dexie{
+ 
 shoppingItems!: Dexie.Table<ShoppingItem, string>;
   
   constructor(private httpClient: HttpClient) { 
@@ -33,6 +34,9 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
   getByPlace(place: string) {
     console.log("Toll");
   }
-  
+
+  clear() {
+    return this.shoppingItems.clear();
+  }
 }
 
