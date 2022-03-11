@@ -49,11 +49,8 @@ export class UebersichtComponent implements OnInit {
   async loeschen(){
     console.log("Alles eingekauft");
     await this.shoppingItemService.clear();
-    await this.loadItems();
-     
+    await this.loadItems();  
   }
-  
-  
 }
 
 
