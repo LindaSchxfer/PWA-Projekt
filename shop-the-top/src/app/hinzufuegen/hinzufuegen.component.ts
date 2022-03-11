@@ -41,8 +41,8 @@ export class HinzufuegenComponent implements OnInit {
   async showMeInfo() {
   const hinweis = document.getElementById("hinweis");
   if (hinweis!=null){
-    hinweis.className = "info";
-    window.setTimeout(this.dontShowMeInfo, 2000);
+    hinweis.classList.toggle("noInfo");
+    /*window.setTimeout(()=> this.dontShowMeInfo, 20000);*/
   }
   
  }
@@ -50,7 +50,7 @@ export class HinzufuegenComponent implements OnInit {
   dontShowMeInfo() {
   let hinweis = document.getElementById("hinweis");
   if (hinweis!=null){
-    hinweis.className = "noInfo";
+    hinweis.classList.toggle("noInfo");
   }
  }
 
