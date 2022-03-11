@@ -12,4 +12,20 @@ export class HinweisComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ /*function showMeInfo() {
+  const hinweis = document.getElementById("hinweis");
+  if (hinweis!=null){
+    hinweis.className = "info";
+    window.setTimeout(dontShowMeInfo, 2000);
+  }
+  
+ }
+
+ function dontShowMeInfo() {
+  let hinweis = document.getElementById("hinweis");
+  if (hinweis!=null){
+    hinweis.className = "noInfo";
+  }
+ }*/
+ 
 }
