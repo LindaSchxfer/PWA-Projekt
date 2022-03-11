@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
+import { HinweisComponent } from './hinweis/hinweis.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
     UebersichtComponent,
     NavComponent,
     HinzufuegenComponent,
+    HinweisComponent,
   ],
   imports: [
     BrowserModule,
