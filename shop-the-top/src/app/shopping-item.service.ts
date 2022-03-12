@@ -37,7 +37,9 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
   getByPlace(searchedPlace: string) {
     return this.shoppingItems.where({place: searchedPlace}).toArray();
   }
+  
 
+  
   deleteByPlace(searchedPlace: string) {
     this.shoppingItems.where({place: searchedPlace}).delete();
   }
