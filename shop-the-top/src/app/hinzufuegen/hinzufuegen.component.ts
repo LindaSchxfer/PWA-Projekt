@@ -10,6 +10,7 @@ import { ShoppingItemService } from '../shopping-item.service';
 })
 export class HinzufuegenComponent implements OnInit {
 
+  isInfoVisible: string = '';
   shoppingItems: ShoppingItem[] = [];
 
   constructor(private shoppingItemService: ShoppingItemService) { }

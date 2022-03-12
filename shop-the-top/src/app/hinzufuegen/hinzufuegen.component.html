@@ -20,4 +20,4 @@
     </select>
     <button mat-raised-button type="submit">Hinzufügen</button>
 </form>
-<div id="hinweis" class="noInfo">Es wurde ein neues Item hinzugefügt.</div>
+<div id="hinweis" [ngClass]="isInfoVisible">Es wurde ein neues Item hinzugefügt.</div>
