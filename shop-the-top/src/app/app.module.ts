@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { HinzufuegenComponent } from './hinzufuegen/hinzufuegen.component';
 import { HinweisComponent } from './hinweis/hinweis.component';
 import { EditComponent } from './edit/edit.component';
+import { OrteComponent } from './orte/orte.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EditComponent } from './edit/edit.component';
     HinzufuegenComponent,
     HinweisComponent,
     EditComponent,
+    OrteComponent,
   ],
   imports: [
     BrowserModule,
