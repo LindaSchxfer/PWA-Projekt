@@ -45,17 +45,47 @@ export class UebersichtComponent implements OnInit {
   
   async loadItems() {
     switch (this.ort) {
-      case "Alle":
+      case "Supermarkt":
+        this.shoppingItems = await this.shoppingItemService.getByPlace("Supermarkt");
+        break;
+      case "Drogerie":
+        this.shoppingItems = await this.shoppingItemService.getByPlace("Drogerie");
+        break;
+      case "Baumarkt":
+        this.shoppingItems = await this.shoppingItemService.getByPlace("Baumarkt");
+        break;
+      case "Fachhandel":
+        this.shoppingItems = await this.shoppingItemService.getByPlace("Fachhandel");
+        break;
+      default:
         this.shoppingItems = await this.shoppingItemService.getAll();
     }
       
-    }
+  }
     
 
-  async loeschen(){
-    console.log("Alles eingekauft");
-    await this.shoppingItemService.clear();
-    await this.loadItems();  
+  async loeschen() {
+    switch (this.ort) {
+      case "Supermarkt":
+        this.shoppingItemService.deleteByPlace("Supermarkt");
+        this.loadItems();
+        break;
+      case "Drogerie":
+        this.shoppingItemService.deleteByPlace("Drogerie");
+        this.loadItems();
+        break;
+      case "Baumarkt":
+        this.shoppingItemService.deleteByPlace("Baumarkt");
+        this.loadItems();
+        break;
+      case "Fachhandel":
+        this.shoppingItemService.deleteByPlace("Fachhandel");
+        this.loadItems();
+        break;
+      default:
+        this.shoppingItemService.clear();
+        this.loadItems();
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { liveQuery } from 'dexie';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 
@@ -10,7 +11,9 @@ import { ShoppingItemService } from '../shopping-item.service';
 })
 export class EditComponent implements OnInit {
 
-  selectedItem: ShoppingItem | undefined;
+  selectedItems: ShoppingItem[] = [];
+  id = this.route.snapshot.params['id'];
+  
   constructor(private shoppingItemService: ShoppingItemService, private route: ActivatedRoute) {
 
    }
@@ -18,17 +21,15 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("editseite")
-    const id = this.route.snapshot.params['id'];
-    this.selectedItem =  this.shoppingItemService.getById(id); 
+    console.log(this.searchForItemById());
   }
   
   async edit(productname: string, quantity: string, place: string, unit: string) {
     this.shoppingItemService.edit(productname, quantity, place, unit);
   }
 
-  async listFriends() { 
-    return await this.shoppingItemService.where("id").toArray();
-  }
-  
+  async searchForItemById() { 
+    this.selectedItems = await this.shoppingItemService.getById(this.id);
+  } 
 }
   

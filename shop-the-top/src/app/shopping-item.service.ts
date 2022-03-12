@@ -20,6 +20,9 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     this.version(1).stores({
       shoppingItems: 'id'
     })
+    this.version(2).stores({
+      shoppingItems: 'id, place'
+    })
   }
 
   getAll() {
@@ -31,8 +34,12 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.add({productname, quantity, place, unit, id: v4(), done: false});
   }
 
-  getByPlace(place: string) {
-    console.log("Toll");
+  getByPlace(searchedPlace: string) {
+    return this.shoppingItems.where({place: searchedPlace}).toArray();
+  }
+
+  deleteByPlace(searchedPlace: string) {
+    this.shoppingItems.where({place: searchedPlace}).delete();
   }
 
   clear() {
@@ -41,14 +48,12 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
 
   edit(productname: string, quantity: string, place: string, unit: string){
     console.log("Edit");
-    //this.shoppingItems.update( productname, )
+    this
     
   }
-  getById(id: string){
-    console.log("GetById");
-    this.shoppingItems.get(id);
-    return this.shoppingItems.toArray();
 
+  getById(searchedId: string){
+    return this.shoppingItems.where({id: searchedId}).toArray();
   }
 }
 
