@@ -1,12 +1,11 @@
-<p>edit works!</p>
-
+<h1>Artikel bearbeiten</h1>
 <form (submit)="edit(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
     <label for="name">Name: </label>
     <input type="text" id="name" class="form-control" name="name" value="{{selectedItems[0].productname}}" #productnameInput required /> <!---->
     <label for="menge">Menge: </label>
-    <input type="number" id="menge" step="0.01" #quantityInput required/>
+    <input type="number" id="menge" step="0.01" value="{{selectedItems[0].quantity}}" #quantityInput required/>
     <label for="einheit">Einheit: </label>
-    <select id="einheit" #unitInput>
+    <select id="einheit" value="{{selectedItems[0].unit}}" #unitInput>
         <option selected value="Stück">Stück</option>
         <option value="Liter">Liter</option>
         <option value="Milliliter">Milliliter</option>
@@ -14,12 +13,12 @@
         <option value="Gramm">Gramm</option>
     </select>
     <label for="ort">Einkaufsort: </label>
-    <select id="ort" #placeInput required>
+    <select id="ort" value="{{selectedItems[0].place}}" #placeInput required>
         <option selected value="Supermarkt">Supermarkt</option>
         <option value="Drogerie">Drogerie</option>
         <option value="Baumarkt">Baumarkt</option>
         <option value="Fachhandel">Fachhandel</option>
     </select>
-    <button mat-raised-button type="submit">Hinzufügen</button>
+    <button mat-raised-button type="submit">Änderung speichern</button>
 </form>
 <p></p>

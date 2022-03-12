@@ -46,9 +46,9 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.clear();
   }
 
-  edit(productname: string, quantity: string, place: string, unit: string){
+ edit( id: string, productname: string, quantity: string, place: string, unit: string){
     console.log("Edit");
-    this
+    return this.shoppingItems.update (id,{productname, quantity, place, unit, id: v4(), done: false} )
     
   }
 
