@@ -13,7 +13,7 @@ import { __values } from 'tslib';
 export class UebersichtComponent implements OnInit {
 
   shoppingItems: ShoppingItem[] = [];
-  ort: string = '';
+  ort: string = 'Alle';
  
 
   constructor(private shoppingItemService: ShoppingItemService) { }
@@ -52,8 +52,13 @@ export class UebersichtComponent implements OnInit {
   }
 
   async loadItems() {
-    this.shoppingItems = await this.shoppingItemService.getAll();
-  }
+    switch (this.ort) {
+      case "Alle":
+        this.shoppingItems = await this.shoppingItemService.getAll();
+    }
+      
+    }
+    
 
   async loeschen(){
     console.log("Alles eingekauft");
