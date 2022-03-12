@@ -24,7 +24,10 @@ export class EditComponent implements OnInit {
   
   async edit(productname: string, quantity: string, place: string, unit: string) {
     this.shoppingItemService.edit(productname, quantity, place, unit);
-   
+  }
+
+  async listFriends() { 
+    return await this.shoppingItemService.where("id").toArray();
   }
   
 }
