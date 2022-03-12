@@ -38,5 +38,11 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
   clear() {
     return this.shoppingItems.clear();
   }
+
+  update (productname: string, quantity: string, place: string, unit: string){
+    console.log("Edit");
+    //this.shoppingItems.update( productname, )
+    
+  }
 }
 

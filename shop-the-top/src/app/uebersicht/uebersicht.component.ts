@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
+import { EditComponent } from '../edit/edit.component'; 
 
 @Component({
   selector: 'app-uebersicht',
@@ -32,16 +33,14 @@ export class UebersichtComponent implements OnInit {
     await this.loadItems();
   }*/
   
-    async aendern () {
-     // const x = document.forms[form];
-     // let text = "";
-      //for (let i = 0; i < x.length ;i++) {
-      //text += x.elements[i].value + "<br>";
-//}     
-      await this.loadItems();
-    }
+ async edit(productname: string, quantity: string, place: string, unit: string){
     
-  
+      //await this.shoppingItemService.put(productname, quantity, place, unit);
+      return this.shoppingItemService.update(productname, quantity, place, unit);
+      await this.loadItems();
+    
+  }
+
   async loadItems() {
     this.shoppingItems = await this.shoppingItemService.getAll();
   }

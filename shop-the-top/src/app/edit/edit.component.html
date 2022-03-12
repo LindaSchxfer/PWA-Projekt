@@ -1,6 +1,7 @@
-<form (submit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
-    <label for="name">Name: </label>
-    <input type="text" id="name" class="form-control" name="name" #productnameInput required />
+<p>edit works!</p>
+<form (submit)="edit(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
+    <label for="name">Name </label>
+    <input type="text" id="name" class="form-control" name="name" #productnameInput required/> 
     <label for="menge">Menge: </label>
     <input type="number" id="menge" step="0.01" #quantityInput required/>
     <label for="einheit">Einheit: </label>
@@ -18,14 +19,5 @@
         <option value="Baumarkt">Baumarkt</option>
         <option value="Fachhandel">Fachhandel</option>
     </select>
-    <button mat-raised-button type="submit">Hinzufügen</button>
+    <button mat-raised-button type="submit">ändern</button>
 </form>
-<<<<<<< HEAD
-<div id="hinweis" [ngClass]="isInfoVisible">Es wurde ein neues Item hinzugefügt.</div>
-=======
-<<<<<<< Updated upstream
-<div id="hinweis" class="noInfo">Es wurde ein neues Item hinzugefügt.</div>
-=======
-<app-hinweis class="info"></app-hinweis>
->>>>>>> Stashed changes
->>>>>>> 6e4a1f560c65fb5ffc7a821a6f60561d980b5330

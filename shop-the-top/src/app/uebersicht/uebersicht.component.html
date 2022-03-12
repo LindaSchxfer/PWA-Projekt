@@ -1,13 +1,11 @@
 <h1>Deine Listeneinträge:</h1>
 <ul>
-    <h1>Ihre Einkaufsliste</h1>
     <li *ngFor="let item of shoppingItems">
         {{ item.productname }}
         {{ item.quantity }}
         {{ item.unit }}
         {{ item.place }}
-        <input class="edit" value="{{item.productname}}">
-       <button (click)="aendern()">ändern</button>
+       <button (click)="edit(item.productname, item.quantity, item.place, item.unit)">Ändern</button>
        
     </li>
 </ul>
