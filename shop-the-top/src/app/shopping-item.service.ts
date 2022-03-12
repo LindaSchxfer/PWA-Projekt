@@ -34,10 +34,21 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.add({productname, quantity, place, unit, id: v4(), done: false});
   }
 
+  edit(productname: string, quantity: string, place: string, unit: string){
+    console.log("Edit");
+    this
+    
+  }
+
+
   getByPlace(searchedPlace: string) {
     return this.shoppingItems.where({place: searchedPlace}).toArray();
   }
+  getById(searchedId: string){
+    return this.shoppingItems.where({id: searchedId}).toArray();
+  }
 
+  
   deleteByPlace(searchedPlace: string) {
     this.shoppingItems.where({place: searchedPlace}).delete();
   }
@@ -46,14 +57,6 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
     return this.shoppingItems.clear();
   }
 
-  edit(productname: string, quantity: string, place: string, unit: string){
-    console.log("Edit");
-    this
-    
-  }
-
-  getById(searchedId: string){
-    return this.shoppingItems.where({id: searchedId}).toArray();
-  }
+  
 }
 
