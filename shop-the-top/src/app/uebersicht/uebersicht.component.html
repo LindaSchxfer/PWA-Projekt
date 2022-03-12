@@ -1,4 +1,14 @@
-<h1>Deine Listeneinträge:</h1>
+<h1>Deine Listeneinträge für:</h1>
+
+<mat-button-toggle-group name="orte" aria-label="Orte Auswahl">
+    <mat-button-toggle value="Alle" (click)="ortWahl(alle.value)" #alle>Alle</mat-button-toggle>
+    <mat-button-toggle value="Supermarkt" (click)="ortWahl(supermarkt.value)"#supermarkt>Supermarkt</mat-button-toggle>
+    <mat-button-toggle value="Drogerie" (click)="ortWahl(drogerie.value)"#drogerie>Drogerie</mat-button-toggle>
+    <mat-button-toggle value="Baumarkt" (click)="ortWahl(baumarkt.value)"#baumarkt>Baumarkt</mat-button-toggle>
+    <mat-button-toggle value="Fachhandel" (click)="ortWahl(fachhandel.value)"#fachhandel>Fachhandel</mat-button-toggle>
+</mat-button-toggle-group>
+  
+
 <ul>
     <li *ngFor="let item of shoppingItems">
         {{ item.productname }}

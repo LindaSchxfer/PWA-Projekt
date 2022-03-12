@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 import { EditComponent } from '../edit/edit.component'; 
+import { FormControl, FormGroup } from '@angular/forms';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-uebersicht',
@@ -11,6 +13,8 @@ import { EditComponent } from '../edit/edit.component';
 export class UebersichtComponent implements OnInit {
 
   shoppingItems: ShoppingItem[] = [];
+  ort: string = '';
+ 
 
   constructor(private shoppingItemService: ShoppingItemService) { }
 
@@ -32,6 +36,12 @@ export class UebersichtComponent implements OnInit {
     await this.shoppingItemService.toggleDone(item);
     await this.loadItems();
   }*/
+
+ async ortWahl(ortVariable: string){
+   this.ort = ortVariable;
+   console.log(this.ort);
+   this.loadItems();
+ }
   
  async edit(productname: string, quantity: string, place: string, unit: string){
     
