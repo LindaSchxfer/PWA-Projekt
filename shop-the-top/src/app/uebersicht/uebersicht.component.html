@@ -15,7 +15,7 @@
         {{ item.quantity }}
         {{ item.unit }}
         {{ item.place }}
-       <button (click)="edit(item.productname, item.quantity, item.place, item.unit)">Ändern</button>
+       <button [routerLink]= "['../aendern', item.id]">Ändern</button>
        
     </li>
 </ul>

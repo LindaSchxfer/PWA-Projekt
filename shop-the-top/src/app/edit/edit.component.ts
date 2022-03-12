@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 
@@ -9,19 +10,22 @@ import { ShoppingItemService } from '../shopping-item.service';
 })
 export class EditComponent implements OnInit {
 
-  shoppingItems: ShoppingItem[] = [];
-  constructor(private shoppingItemService: ShoppingItemService) { }
+  selectedItem: ShoppingItem | undefined;
+  constructor(private shoppingItemService: ShoppingItemService, private route: ActivatedRoute) {
+
+   }
   
 
   ngOnInit(): void {
-    this.loadItems();
+    console.log("editseite")
+    const id = this.route.snapshot.params['id'];
+    this.selectedItem =  this.shoppingItemService.getById(id); 
   }
+  
   async edit(productname: string, quantity: string, place: string, unit: string) {
-    await this.shoppingItemService.update(productname, quantity, place, unit);
-    await this.loadItems();
-  }
-  async loadItems() {
-    this.shoppingItems = await this.shoppingItemService.getAll();
+    this.shoppingItemService.edit(productname, quantity, place, unit);
+   
   }
   
 }
+  

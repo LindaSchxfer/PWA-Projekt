@@ -3,7 +3,7 @@ import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 import { EditComponent } from '../edit/edit.component'; 
 import { FormControl, FormGroup } from '@angular/forms';
-import { __values } from 'tslib';
+//import { __values } from 'tslib';
 
 @Component({
   selector: 'app-uebersicht',
@@ -43,14 +43,6 @@ export class UebersichtComponent implements OnInit {
    this.loadItems();
  }
   
- async edit(productname: string, quantity: string, place: string, unit: string){
-    
-      //await this.shoppingItemService.put(productname, quantity, place, unit);
-      return this.shoppingItemService.update(productname, quantity, place, unit);
-      await this.loadItems();
-    
-  }
-
   async loadItems() {
     switch (this.ort) {
       case "Alle":
