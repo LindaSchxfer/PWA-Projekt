@@ -45,7 +45,6 @@ li {
 }
 
 #loeschen{
-    margin-left: 57%;
     margin-top: 30px;
     border-color: #e0e0e0;
     border-width: 1px;
@@ -53,6 +52,15 @@ li {
     background-color: white;
     border-radius: 3px;
     padding: 10px;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    position: relative;
+    z-index: 0;
+    margin-left: 3%;
 }
 
 #loeschen:hover {
