@@ -15,9 +15,9 @@
         {{ item.quantity }}
         {{ item.unit }}
         {{ item.place }}
-       <button [routerLink]= "['../aendern', item.id]">Ändern</button>
+       <button id="aendern" [routerLink]= "['../aendern', item.id]">Ändern</button>
        
     </li>
 </ul>
 
-<button (click)="loeschen()">Alles Eingekauft</button>
+<button id="loeschen" (click)="loeschen()">Alles eingekauft</button>
