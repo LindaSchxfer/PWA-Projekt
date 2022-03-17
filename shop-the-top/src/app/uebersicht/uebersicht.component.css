@@ -66,3 +66,8 @@ li {
 #loeschen:hover {
     background-color: #f5f5f5;
 }
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}

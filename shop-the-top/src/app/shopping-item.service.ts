@@ -57,5 +57,10 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
   getById(searchedId: string){
     return this.shoppingItems.where({id: searchedId}).toArray();
   }
+
+  crossOut(item: ShoppingItem){
+    item.done = !item.done;
+    return this.shoppingItems.put(item);
+  }
 }
 

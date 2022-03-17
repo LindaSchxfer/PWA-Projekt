@@ -89,10 +89,10 @@ export class UebersichtComponent implements OnInit {
         this.loadItems();
     }
   }
-  toggle:Boolean=true  
 
-  async crossOut(){
-    this.toggle=!this.toggle;
+  async crossOut(item: ShoppingItem){
+    await this.shoppingItemService.crossOut(item);
+    await this.loadItems();
   }
 }
 
