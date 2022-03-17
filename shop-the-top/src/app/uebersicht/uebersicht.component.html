@@ -12,10 +12,12 @@
 <ul>
     <li *ngFor="let item of shoppingItems">
         <input (click)="crossOut()" type="checkbox"/>
+        <div *ngIf="toggle">
         {{ item.productname }}
         {{ item.quantity }}
         {{ item.unit }}
         {{ item.place }}
+        </div>
        <button id="aendern" [routerLink]= "['../aendern', item.id]">Ändern</button>
     </li>
 </ul>

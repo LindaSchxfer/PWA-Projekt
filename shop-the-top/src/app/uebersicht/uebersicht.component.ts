@@ -89,10 +89,11 @@ export class UebersichtComponent implements OnInit {
         this.loadItems();
     }
   }
+  toggle:Boolean=true  
 
   async crossOut(){
-     //Funktion durchstreichen des Textes
-    }
+    this.toggle=!this.toggle;
+  }
 }
 
 
