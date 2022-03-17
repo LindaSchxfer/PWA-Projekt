@@ -25,7 +25,7 @@ export class EditComponent implements OnInit {
   
   async edit(productname: string, quantity: string, place: string, unit: string) {
     this.shoppingItemService.edit( this.id, productname, quantity, place, unit);
-    this.router.navigate(['/uebersicht'])
+    this.router.navigate(['/'])
   }
 
   async searchForItemById() { 

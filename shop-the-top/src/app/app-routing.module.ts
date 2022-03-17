@@ -9,7 +9,7 @@ import { UebersichtComponent } from './uebersicht/uebersicht.component';
 Leere Route '' --> Quasi Startbildschirm */
 const routes: Routes = [
   { path: '', component: UebersichtComponent },
-  { path: 'uebersicht', component: UebersichtComponent },
+  //{ path: 'uebersicht', component: UebersichtComponent },
   { path: 'hinzufuegen', component: HinzufuegenComponent },
   { path: 'aendern/:id', component: EditComponent },
 ]; 
