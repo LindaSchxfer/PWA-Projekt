@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingItem } from '../shopping-item';
 import { ShoppingItemService } from '../shopping-item.service';
 import { EditComponent } from '../edit/edit.component'; 
-import { FormControl, FormGroup } from '@angular/forms';
+import { CheckboxControlValueAccessor, FormControl, FormGroup } from '@angular/forms';
+import { isNgTemplate } from '@angular/compiler';
+import { style } from '@angular/animations';
 //import { __values } from 'tslib';
 
 @Component({
@@ -87,6 +89,10 @@ export class UebersichtComponent implements OnInit {
         this.loadItems();
     }
   }
+
+  async crossOut(){
+     //Funktion durchstreichen des Textes
+    }
 }
 
 
