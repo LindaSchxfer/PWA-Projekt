@@ -5,7 +5,6 @@ import { EditComponent } from '../edit/edit.component';
 import { CheckboxControlValueAccessor, FormControl, FormGroup } from '@angular/forms';
 import { isNgTemplate } from '@angular/compiler';
 import { style } from '@angular/animations';
-//import { __values } from 'tslib';
 
 @Component({
   selector: 'app-uebersicht',
@@ -23,21 +22,6 @@ export class UebersichtComponent implements OnInit {
   ngOnInit(): void {
     this.loadItems();
   }
-
-  /*async add(title: string) {
-    await this.shoppingItemService.add();
-    await this.loadItems();
-  }*/
-
-  /*async sync() {
-    await this.shoppingItemService.sync();
-    await this.loadItems();
-  }
-
-  async toggleDone(item: ShoppingItem) {
-    await this.shoppingItemService.toggleDone(item);
-    await this.loadItems();
-  }*/
 
  async ortWahl(ortVariable: string){
    this.ort = ortVariable;
