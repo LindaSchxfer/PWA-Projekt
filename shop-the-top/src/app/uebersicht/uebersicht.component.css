@@ -39,6 +39,8 @@ mat-button-toggle:hover {
 
 ul { 
     display: grid;
+    padding-right: 10%;
+    padding-left: 10%;
     justify-content: center;
     align-items: center; 
     margin-top: 3%;
@@ -93,6 +95,11 @@ li {
     margin-left: 3%;
 }
 
+div.button{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #loeschen:hover {
     background-color: #f5f5f5;
 }
@@ -118,4 +125,9 @@ li {
 #loeschen_item:hover {
     background-color: rgb(179, 128, 128);
     border-color: rgb(179, 128, 128);
+}
+
+ul.nav.navbar-nav.active{
+    padding-left: 10%;
+    padding-right: 10%;
 }
