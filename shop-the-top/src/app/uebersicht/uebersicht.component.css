@@ -1,12 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+.header {
+    background-color: white;
+    top: 0;
+
+}
+
 h1 {
-    margin-top: 3%;
+    padding: 3%;
     text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0;
+}
+
+img {
+    width: 15%;
+    position: absolute;
+    padding: 15px;
 }
 
 mat-button-toggle-group {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Rubik', sans-serif;
 }
 
 mat-button-toggle {
@@ -18,16 +37,18 @@ ul {
     justify-content: center;
     align-items: center; 
     margin-top: 3%;
+    font-family: 'Rubik', sans-serif;
 }
 
 li {
     padding: 15px;
-    background: #e0e0e0;
+    margin-bottom: 8px;
+    background: #a2bea8;
     list-style: none;
+    border-radius: 3px;
 }
 
 #aendern {
-    
     margin-left: 20px;
     border-color: #e0e0e0;
     border-width: 1px;
@@ -37,7 +58,7 @@ li {
     padding: 5px;
     font-size: 12px;
     float: right;
-    
+    font-family: 'Rubik', sans-serif;
 }
 
 #aendern:hover {
@@ -52,6 +73,8 @@ li {
     background-color: white;
     border-radius: 3px;
     padding: 10px;
+    margin-bottom: 170px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .button {

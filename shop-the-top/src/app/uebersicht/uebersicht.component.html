@@ -1,4 +1,6 @@
-<h1>Deine Listeneinträge für:</h1>
+<div class="header">
+    <img src="logo.png" alt="">
+    <h1>Deine Einkaufsliste</h1>
 
 <mat-button-toggle-group name="orte" aria-label="Orte Auswahl">
     <mat-button-toggle value="Alle" (click)="ortWahl(alle.value)" #alle checked>Alle</mat-button-toggle>
@@ -7,7 +9,8 @@
     <mat-button-toggle value="Baumarkt" (click)="ortWahl(baumarkt.value)"#baumarkt>Baumarkt</mat-button-toggle>
     <mat-button-toggle value="Fachhandel" (click)="ortWahl(fachhandel.value)"#fachhandel>Fachhandel</mat-button-toggle>
 </mat-button-toggle-group>
-  
+
+</div>
 
 <ul>
     <li *ngFor="let item of shoppingItems" [class.done]="item.done">
