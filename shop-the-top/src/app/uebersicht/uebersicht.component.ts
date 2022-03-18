@@ -73,7 +73,10 @@ export class UebersichtComponent implements OnInit {
         this.loadItems();
     }
   }
-
+  async item_loeschen(id: string, productname: string, quantity: string, place: string, unit: string){
+    await this.shoppingItemService.item_delete(id, productname, quantity, place, unit);
+    await this.loadItems();
+  }
   async crossOut(item: ShoppingItem){
     await this.shoppingItemService.crossOut(item);
     await this.loadItems();

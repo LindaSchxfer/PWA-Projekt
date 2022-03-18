@@ -12,7 +12,7 @@ import { ShoppingItem } from './shopping-item';
 export class ShoppingItemService extends Dexie{
  
 shoppingItems!: Dexie.Table<ShoppingItem, string>;
-  
+
   constructor(private httpClient: HttpClient) { 
    
     super('ShoppingItemDB');
@@ -46,6 +46,9 @@ shoppingItems!: Dexie.Table<ShoppingItem, string>;
 
   clear() {
     return this.shoppingItems.clear();
+  }
+  item_delete(id: string, productname: string, quantity: string, place: string, unit: string) {
+    return this.shoppingItems.delete(id);
   }
 
  edit( id: string, productname: string, quantity: string, place: string, unit: string){
