@@ -1,6 +1,8 @@
 <div class="container">
     <h1>Artikel hinzufügen</h1>
+    <div class="wrapper">
     <form (submit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
+        
         <label for="name">Artikel: </label>
         <input type="text" id="name" class="form-control" name="name" #productnameInput required />
         <label for="menge">Menge: </label>
@@ -20,6 +22,8 @@
             <option value="Baumarkt">Baumarkt</option>
             <option value="Fachhandel">Fachhandel</option>
         </select>
+        
         <button id="hinzufuegen" mat-raised-button type="submit">Hinzufügen</button>
-    </form>  
+    </form>   
+</div>
 </div>

@@ -3,15 +3,14 @@
 .header {
     background-color: white;
     top: 0;
-
 }
 
 h1 {
-    padding: 3%;
+    padding: 2%;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 180%;
     margin: 0;
 }
 
@@ -26,10 +25,16 @@ mat-button-toggle-group {
     justify-content: center;
     align-items: center;
     font-family: 'Rubik', sans-serif;
+    font-size: 100%;
+    width: 100%;
 }
 
 mat-button-toggle {
-    width: 100px;
+    width: 100%;
+}
+
+mat-button-toggle:hover {
+    background-color: #d3e0d6;
 }
 
 ul { 
@@ -46,13 +51,15 @@ li {
     background: #a2bea8;
     list-style: none;
     border-radius: 3px;
+    color: white;
+    
 }
 
 #aendern {
     margin-left: 20px;
     border-color: #e0e0e0;
     border-width: 1px;
-    border-style: double ;
+    border-style: solid;
     background-color: white;
     border-radius: 3px;
     padding: 5px;
@@ -69,7 +76,7 @@ li {
     margin-top: 30px;
     border-color: #e0e0e0;
     border-width: 1px;
-    border-style: double ;
+    border-style: solid;
     background-color: white;
     border-radius: 3px;
     padding: 10px;
@@ -93,4 +100,22 @@ li {
 .done {
     text-decoration: line-through;
     color: gray;
+}
+
+#loeschen_item {
+    margin-left: 20px;
+    border-color: #e0e0e0;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 12px;
+    float: right;
+    font-family: 'Rubik', sans-serif;
+}
+
+#loeschen_item:hover {
+    background-color: rgb(179, 128, 128);
+    border-color: rgb(179, 128, 128);
 }
