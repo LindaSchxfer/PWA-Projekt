@@ -1,8 +1,8 @@
 {
   "name": "shop-the-top",
   "short_name": "shop-the-top",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#a2bea8",
+  "background_color": "#a2bea8",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

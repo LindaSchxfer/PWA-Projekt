@@ -18,8 +18,13 @@ export class HinzufuegenComponent implements OnInit {
     this.loadItems();
   }
 
+
   async add(productname: string, quantity: string, place: string, unit: string) {
-    await this.shoppingItemService.add(productname, quantity, place, unit);
+    if(productname!){
+      await this.shoppingItemService.add(productname, quantity, place, unit);
+    } else {
+      console.log("Keine Eingabe bei Produktname")
+    }
     await this.loadItems();
   }
  

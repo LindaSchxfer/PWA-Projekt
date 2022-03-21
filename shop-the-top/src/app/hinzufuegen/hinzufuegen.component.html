@@ -2,9 +2,8 @@
     <h1>Artikel hinzufügen</h1>
     <div class="wrapper">
     <form (submit)="add(productnameInput.value, quantityInput.value, placeInput.value, unitInput.value)">
-        
         <label for="name">Artikel: </label>
-        <input type="text" id="name" class="form-control" name="name" #productnameInput required />
+        <input type="text" id="name" class="form-control" name="name" #productnameInput required/>
         <label for="menge">Menge: </label>
         <input type="number" id="menge" step="1" #quantityInput required/>
         <label for="einheit">Einheit: </label>
