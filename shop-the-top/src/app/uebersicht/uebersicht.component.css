@@ -71,7 +71,9 @@ li {
 }
 
 #aendern:hover {
-    background-color: #f5f5f5;
+    background-color: #929191;
+    border-color: #929191;
+    color: white;
 }
 
 #loeschen{
@@ -125,6 +127,7 @@ div.button{
 #loeschen_item:hover {
     background-color: rgb(179, 128, 128);
     border-color: rgb(179, 128, 128);
+    color: white;
 }
 
 ul.nav.navbar-nav.active{

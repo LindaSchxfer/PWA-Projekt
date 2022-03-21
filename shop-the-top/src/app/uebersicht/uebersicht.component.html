@@ -16,8 +16,8 @@
     <li *ngFor="let item of shoppingItems" [class.done]="item.done">
         <input type="checkbox" [checked]="item.done" (click)="crossOut(item)"/>
         {{ item.productname }}
-        {{ item.quantity }}
-        {{ item.unit }}
+        ({{ item.quantity }}
+        {{ item.unit }})
        <button id="aendern" [routerLink]= "['../aendern', item.id]">Ändern</button>
        <button id="loeschen_item" (click)="item_loeschen(item.id, item.productname, item.quantity, item.unit, item.place)">Löschen</button>
     </li>
